@@ -11,7 +11,7 @@
         <a href="{{ Config::get('personal.company_website', '#') }}" target="_blank">{{ Config::get('personal.company', 'Acme') }}</a>
     </small>
 </h2>
-@show
+@stop
 
 <div class="row">
     <div class="box">
