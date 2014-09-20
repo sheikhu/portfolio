@@ -22,7 +22,7 @@ Route::when('*', 'csrf', array('post'));
 
 Route::get('/', ['as' => 'home', function()
 {
-    return View::make('index');
+    return View::make('index', ['posts' => Post::take(3)->get()]);
 }]);
 
 Route::get('/about', ['as' => 'about', function()

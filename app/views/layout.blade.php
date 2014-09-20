@@ -14,35 +14,37 @@
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
 
-    @section('styles')
-    {{-- HTML::style('business-casual/css/bootstrap.min.css') --}}
-    {{-- HTML::style('business-casual/css/business-casual.css') --}}
-    {{-- HTML::style('css/app.css') --}}
+@section('styles')
+{{-- HTML::style('business-casual/css/bootstrap.min.css') --}}
+{{-- HTML::style('business-casual/css/business-casual.css') --}}
+{{-- HTML::style('css/app.css') --}}
 
-    {{ HTML::style('dist/css/styles.css') }}
-    @show
+{{ HTML::style('dist/css/styles.css') }}
+@show
 
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
 
 </head>
 
 <body>
 
-    <div class="brand">Cheikhou Oumar Ly</div>
+    @section('self')
+        <div class="brand">Cheikhou Oumar Ly</div>
     <h2 class="text-center job">Web developer at
-    <small><a href="#">Vivializ</a></small>
+        <small><a href="#">Vivializ</a></small>
     </h2>
+    @show
 
 
     <!-- Navigation -->
@@ -62,12 +64,11 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-
                     <li @if(Route::is('home')) class="active" @endif>
-                        <a href="{{ route('home') }}">Home</a>
+                    <a href="{{ route('home') }}">Accueil</a>
                     </li>
                     <li @if(Route::is('about')) class="active" @endif>
-                        <a href="{{ route('about') }}">About</a>
+                        <a href="{{ route('about') }}">A propos</a>
                     </li>
                     <li @if(Route::is('blog')) class="active" @endif>
                         <a href="{{ route('blog') }}">Blog</a>
@@ -90,16 +91,12 @@
     <!-- /.container -->
 
     <div class="footer">
-      <div class="container">
-        <p class="text-muted" style="display:inline-block">
-        Copyright &copy; Your Website {{ date('Y') }}.
-        </p>
-        <div class="btn-group">
-            <button type="button" class="btn btn-default">Left</button>
-            <button type="button" class="btn btn-default">Middle</button>
-            <button type="button" class="btn btn-default">Right</button>
+        <div class="container">
+            <p class="text-muted" style="display:inline-block">
+                Copyright &copy; Your Website {{ date('Y') }}.
+            </p>
+        </ul>
         </div>
-      </div>
     </div>
 
     @section('scripts')
@@ -108,11 +105,11 @@
     <script>hljs.initHighlightingOnLoad();</script>
     <!-- Script to Activate the Carousel -->
     <script>
-    $('.carousel').carousel({
-        interval: 5000 //changes the speed
-    })
-    </script>
-    @show
+        $('.carousel').carousel({
+interval: 5000 //changes the speed
+})
+</script>
+@show
 
 </body>
 
