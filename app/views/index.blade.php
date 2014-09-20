@@ -35,13 +35,13 @@
                             {{ $post->title }}
                         </a>
                         <small>
-                         - <i class="fa fa-calendar"></i> {{ $post->created_at->format('d m, Y') }}
-                     </small>
-                 </h3>
-             </div>
-             @endforeach
-             <hr>
-             <div class="text-center">
+                           - <i class="fa fa-calendar"></i> {{ $post->created_at->format('d m, Y') }}
+                       </small>
+                   </h3>
+               </div>
+               @endforeach
+               <hr>
+               <div class="text-center">
                 <a href="{{ route('blog') }}" class="btn btn-default">
                     Plus d'articles
                 </a>
@@ -51,7 +51,7 @@
 </div>
 </div>
 <div class="row">
-    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xs-offset-5 col-sm-offset-5 col-md-offset-5 col-lg-offset-5">
+    <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 col-xs-offset-4 col-sm-offset-5 col-md-offset-5 col-lg-offset-5">
 
         <div class="row">
             <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
@@ -71,10 +71,18 @@
             </a>
         </div>
         <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-            <a href="#" class="linkedin-link" target="_blank">
+        <a href="{{ Config::get('personal.linkedin_link', '#') }}" class="linkedin-link" target="_blank">
                 <span class="fa-stack fa-lg">
                     <i class="fa fa-circle-thin fa-stack-2x"></i>
                     <i class="fa fa-linkedin fa-stack-1x"></i>
+                </span>
+            </a>
+        </div>
+        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+            <a href="{{ Config::get('personal.github_link', '#') }}" class="github-link" target="_blank">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle-thin fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x"></i>
                 </span>
             </a>
         </div>
