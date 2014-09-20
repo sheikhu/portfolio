@@ -1,1 +1,1 @@
-/var/www/portfolio/app/views/contact.blade.php
+@extends('layout')

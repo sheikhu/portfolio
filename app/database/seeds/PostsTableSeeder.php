@@ -9,6 +9,10 @@ class PostsTableSeeder extends Seeder {
 	{
 		$faker = Faker::create();
 
+        DB::table('tags')->truncate();
+
+        $tags = Tag::lists('id');
+
 		foreach(range(1, 10) as $index)
 		{
 			Post::create([
