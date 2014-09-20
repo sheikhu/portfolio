@@ -10,7 +10,7 @@
     <meta name="author" content="">
 
     <title>Business Casual - Start Bootstrap Theme</title>
-
+    <link rel="stylesheet" href="https://highlightjs.org/static/styles/tomorrow-night.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -95,14 +95,15 @@
 
     @section('scripts')
     {{ HTML::script('dist/js/scripts.js') }}
-    @show
-
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <!-- Script to Activate the Carousel -->
     <script>
     $('.carousel').carousel({
         interval: 5000 //changes the speed
     })
     </script>
+    @show
 
 </body>
 

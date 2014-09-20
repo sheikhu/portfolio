@@ -33,4 +33,9 @@
             </div>
         </div>
 
+<pre>
+<code class="hljs language-php">
+    echo "hello world";
+</code>
+</pre>
 @stop
