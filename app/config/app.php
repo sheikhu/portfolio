@@ -122,8 +122,7 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 	    'Intervention\Image\ImageServiceProvider',
-	    'AdamWathan\BootForms\BootFormsServiceProvider',
-	    'Cartalyst\Sentry\SentryServiceProvider',
+	    'AdamWathan\BootForms\BootFormsServiceProvider'
 
 	),
 
