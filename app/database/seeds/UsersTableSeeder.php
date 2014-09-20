@@ -7,15 +7,16 @@ class UsersTableSeeder extends Seeder {
 
 	public function run()
 	{
-		$faker = Faker::create();
+        $faker = Faker::create();
 
+        DB::table('users')->truncate();
 
-			User::create([
+        User::create([
             'username'  => 'sheikhu',
             'email'     =>  'sheikhu02@gmail.com',
             'password'  =>  'passer'
-			]);
+            ]);
 
-	}
+    }
 
 }

@@ -10,32 +10,26 @@
             </h2>
             <hr>
         </div>
-        <div class="col-lg-12">
 
+        @foreach ($posts as $p)
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <h3>
-                <a class="post-title" href="#">
-                    Protéger un champ de formulaire Symfony2 avec un droit
+                <a class="post-title" href="{{ route('post.show', $p->slug) }}">
+                    {{ $p->title }}
                 </a>
 
-                <small>October 13, 2013</small>
+                <small>{{ $p->created_at->format('d m, Y') }}</small>
             </h3>
-            <p>Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+            <p class="content">
+                {{ $p->content }}
+            </p>
             <a href="#" class="btn btn-default btn-sm">Read More</a>
-
         </div>
 
-        <div class="col-lg-12">
+        @endforeach
 
-            <h3>
-                <a class="post-title" href="#">
-                    Protéger un champ de formulaire Symfony2 avec un droit
-                </a>
-
-                <small>October 13, 2013</small>
-            </h3>
-            <p>Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-            <a href="#" class="btn btn-default btn-sm">Read More</a>
-
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            {{ $posts->links() }}
         </div>
     </div>
 </div>

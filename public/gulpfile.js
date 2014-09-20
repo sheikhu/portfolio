@@ -22,9 +22,14 @@ gulp.task('styles', function() {
 
 
 gulp.task('images', function() {
-
     gulp.src(['business-casual/img/*'])
     .pipe(gulp.dest('dist/img'));
+});
+
+gulp.task('fonts', function() {
+
+    gulp.src(['business-casual/fonts/*'])
+    .pipe(gulp.dest('dist/fonts'));
 });
 
 gulp.task('scripts', function() {
@@ -37,7 +42,7 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest('dist/js'));
 });
 
-gulp.task('default', ['styles', 'images', 'scripts'], function() {
+gulp.task('default', ['styles', 'images', 'scripts', 'fonts'], function() {
 
     gulp.watch([
         './business-casual/css/*.css',

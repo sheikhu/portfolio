@@ -11,25 +11,30 @@
 |
 */
 
-require 'admin_routes.php';
+if(Auth::check())
+{
+    require 'admin_routes.php';
+}
 
 // csrf protection for all post requests
 
 Route::when('*', 'csrf', array('post'));
 
-Route::get('/', function()
+Route::get('/', ['as' => 'home', function()
 {
     return View::make('index');
-});
+}]);
 
-Route::get('/about', function()
+Route::get('/about', ['as' => 'about', function()
 {
     return View::make('about');
-});
+}]);
 
-Route::get('blog', function(){
-    return View::make('blog');
-});
+
+
+Route::get('contact', ['as' => 'contact', function(){
+    return View::make('contact');
+}]);
 
 Route::group(['before' => 'auth'], function(){
 
@@ -54,9 +59,7 @@ Route::group(['before' => 'auth'], function(){
 Route::group(['before' => 'guest'], function(){
 
 
-    Route::get('login', [ 'as' => 'login', function(){
-        return View::make('auth.login');
-    }]);
+    Route::get('login', [ 'as' => 'login', 'uses' => 'SessionsController@getLogin']);
 
 
     Route::post('login', ['as' => 'post_login', function(){
@@ -92,12 +95,12 @@ Route::group(['before' => 'guest'], function(){
         return Redirect::to('login')->withInput()->with('error','Bad credentials ! Please retry.');
     }]);
 
-//Route::controller('password', 'RemindersController');
-
-
 });
 
 
+Route::get('blog', ['as' => 'blog', 'uses' => 'BlogController@index']);
+
+Route::get('blog/{slug}', ['as' => 'post.show', 'uses' => 'BlogController@show']);
 
 
 

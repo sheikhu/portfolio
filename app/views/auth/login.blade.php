@@ -36,25 +36,14 @@
 
 
       <div class="row">
-          <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
-
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
               {{ BootForm::submit('Login')->addClass('btn-block btn-primary') }}
-          </div>
-          <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-      <div class="spinner" style="display:none"></div>
           </div>
       </div>
 
       {{ BootForm::token() }}
       {{ BootForm::close() }}
 
-      <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <a href="{{ action('RemindersController@getRemind')}}" class="">
-                Forgot your password ?
-            </a>
-        </div>
-    </div>
 </div>
 </div>
 

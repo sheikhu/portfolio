@@ -39,8 +39,11 @@
 
 <body>
 
-    <div class="brand">Cheikhou Ly</div>
-    <div class="address-bar">3481 Melrose Place | Beverly Hills, CA 90210 | sheikhu02[at]gmail.com</div>
+    <div class="brand">Cheikhou Oumar Ly</div>
+    <h2 class="text-center job">Web developer at
+    <small><a href="#">Vivializ</a></small>
+    </h2>
+
 
     <!-- Navigation -->
     <nav class="navbar navbar-default" role="navigation">
@@ -60,16 +63,16 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="index.html">Home</a>
+                        <a href="{{ route('home') }}">Home</a>
                     </li>
                     <li>
-                        <a href="about.html">About</a>
+                        <a href="{{ route('about') }}">About</a>
                     </li>
                     <li>
-                        <a href="blog.html">Blog</a>
+                        <a href="{{ route('blog') }}">Blog</a>
                     </li>
                     <li>
-                        <a href="contact.html">Contact</a>
+                        <a href="{{ route('contact') }}">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -87,9 +90,14 @@
 
     <div class="footer">
       <div class="container">
-        <p class="text-muted">
+        <p class="text-muted" style="display:inline-block">
         Copyright &copy; Your Website {{ date('Y') }}.
         </p>
+        <div class="btn-group">
+            <button type="button" class="btn btn-default">Left</button>
+            <button type="button" class="btn btn-default">Middle</button>
+            <button type="button" class="btn btn-default">Right</button>
+        </div>
       </div>
     </div>
 
