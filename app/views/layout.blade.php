@@ -9,7 +9,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Business Casual - Start Bootstrap Theme</title>
+    <title>{{ Config::get('personal.name', 'John Doe') }}
+    -
+    {{ Config::get('personal.work', 'Web developer') }}
+    </title>
     <link rel="stylesheet" href="https://highlightjs.org/static/styles/tomorrow-night.css">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
@@ -41,9 +44,10 @@
 <body>
 
     @section('self')
-        <div class="brand">Cheikhou Oumar Ly</div>
-    <h2 class="text-center job">Web developer at
-        <small><a href="#">Vivializ</a></small>
+        <div class="brand">{{ Config::get('personal.name', 'John Doe')}}</div>
+    <h2 class="text-center job">
+    {{ Config::get('personal.work', 'Web developer')}} at
+        <small><a href="{{ Config::get('personal.company_website', '#')}}">{{ Config::get('personal.company', 'Acme')}}</a></small>
     </h2>
     @show
 
