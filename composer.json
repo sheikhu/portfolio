@@ -12,7 +12,8 @@
 		"fzaninotto/faker": "dev-master",
 		"way/generators": "~2.0",
         "barryvdh/laravel-debugbar": "1.*",
-        "barryvdh/laravel-ide-helper": "1.*"
+        "barryvdh/laravel-ide-helper": "1.*",
+        "pda/pheanstalk":"dev-master"
 	},
 	"autoload": {
 		"classmap": [

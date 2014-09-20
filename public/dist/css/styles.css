@@ -102,6 +102,11 @@ pre {
   font-weight: bold;
 }
 
+
+.facebook-link {color: #48649F;}
+.twitter-link {color: #00ACEE;}
+.linkedin-link {color: #489DC9;}
+
 /*!
  * Bootstrap v3.2.0 (http://getbootstrap.com)
  * Copyright 2011-2014 Twitter, Inc.
@@ -6424,14 +6429,14 @@ footer p {
     .brand {
         display: inherit;
         margin: 0;
-        padding: 30px 0 10px;
+        padding: 30px 0 0 0;
         text-align: center;
-        text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-        font-family: "Bree Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
-        font-size: 5em;
+        text-shadow: 1px 1px 2px rgba(50,50,50,0.5);
+        font-family: "Kreon","Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-size: 4.5em;
         font-weight: 700;
         line-height: normal;
-        color: #333333;
+        color: #444444;
     }
 
     .top-divider {

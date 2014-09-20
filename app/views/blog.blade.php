@@ -20,11 +20,11 @@
                     {{ $p->title }}
                 </a>
                 <small>-
-                <span class="glyphicon glyphicon-calendar"></span> {{ $p->created_at->format('d m, Y') }}
+                <i class="fa fa-calendar"></i> {{ $p->created_at->format('d m, Y') }}
                 </small>
             </h3>
             <p class="tags">
-                <span class="glyphicon glyphicon-tags"></span>
+                <i class="fa fa-tags"></i>
             </p>
             <p class="content">
                 {{ $p->content }}
