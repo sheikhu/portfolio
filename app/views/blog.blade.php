@@ -20,7 +20,7 @@
                     {{ $p->title }}
                 </a>
                 <small>-
-                <i class="fa fa-calendar"></i> {{ $p->created_at->format('d m, Y') }}
+                <i class="fa fa-calendar"></i> {{ $p->pubdate() }}
                 </small>
             </h3>
             <p class="tags">

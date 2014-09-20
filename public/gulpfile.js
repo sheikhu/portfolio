@@ -11,6 +11,7 @@ gulp.task('styles', function() {
         [
         './css/*.css',
         './business-casual/css/*.css',
+        './vendor/redactor/redactor/redactor.css',
         ]
         )
     .pipe(concat('styles.css'))
@@ -36,7 +37,8 @@ gulp.task('scripts', function() {
 
     gulp.src([
         'business-casual/js/jquery-1.11.0.js',
-        'business-casual/js/bootstrap.min.js'
+        'business-casual/js/bootstrap.min.js',
+        './vendor/redactor/redactor/redactor.min.js',
         ])
     .pipe(concat('scripts.js'))
     .pipe(gulp.dest('dist/js'));

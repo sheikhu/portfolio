@@ -43,20 +43,12 @@
 
 <body>
 
-    @section('self')
-        <div class="brand">{{ Config::get('personal.name', 'John Doe')}}</div>
-    <h2 class="text-center job">
-    {{ Config::get('personal.work', 'Web developer')}} at
-        <small><a href="{{ Config::get('personal.company_website', '#')}}">{{ Config::get('personal.company', 'Acme')}}</a></small>
-    </h2>
-    @show
-
 
     <!-- Navigation -->
     <nav class="navbar navbar-default" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
+            <div id="menu" class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
@@ -100,7 +92,6 @@
             <p class="text-muted" style="display:inline-block">
                 Copyright &copy; Your Website {{ date('Y') }}.
             </p>
-        </ul>
         </div>
     </div>
 

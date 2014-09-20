@@ -7,8 +7,12 @@
             {{ $post->title }}
         </h1>
         <p class="tags">
-            <span class="glyphicon glyphicon-tags"></span>
+            <i class="fa fa-tags"></i>
             Tags : <span class="label label-success">Label</span>
+        </p>
+        <p class="date">
+            <i class="fa fa-calendar"></i>
+            Date : {{ $post->pubdate() }}
         </p>
         <p class="post-content">
             {{ $post->content }}

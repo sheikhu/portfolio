@@ -22,6 +22,11 @@ class Post extends \Eloquent {
     }
 
 
+    public function pubdate()
+    {
+        return $this->updated_at->format('d m, Y');
+    }
+
     public static function boot()
     {
         parent::boot();

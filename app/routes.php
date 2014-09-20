@@ -22,7 +22,8 @@ Route::when('*', 'csrf', array('post'));
 
 Route::get('/', ['as' => 'home', function()
 {
-    return View::make('index', ['posts' => Post::take(3)->get()]);
+    $posts = Post::orderBy('updated_at', 'DESC')->take(3)->get();
+    return View::make('index', compact('posts'));
 }]);
 
 Route::get('/about', ['as' => 'about', function()
