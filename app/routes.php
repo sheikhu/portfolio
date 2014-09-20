@@ -33,8 +33,8 @@ Route::get('/about', ['as' => 'about', function()
 
 
 
-Route::get('contact', ['as' => 'contact', function(){
-    return View::make('contact');
+Route::get('cv', ['as' => 'cv', function(){
+    return View::make('cv');
 }]);
 
 Route::group(['before' => 'auth'], function(){

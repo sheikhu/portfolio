@@ -70,8 +70,8 @@
                     <li @if(Route::is('blog')) class="active" @endif>
                         <a href="{{ route('blog') }}">Blog</a>
                     </li>
-                    <li @if(Route::is('contact')) class="active" @endif>
-                        <a href="{{ route('contact') }}">Contact</a>
+                    <li @if(Route::is('cv')) class="active" @endif>
+                        <a href="{{ route('cv') }}">CV</a>
                     </li>
                 </ul>
             </div>
