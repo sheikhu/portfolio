@@ -40,11 +40,11 @@
             <hr>
             <div class="row">
                 <ul class="navbar-nav list-inline">
-                  <li><a href="#">Html5/Css3</a> | </li>
-                  <li><a href="#">Php</a> | </li>
-                  <li><a href="#">Symfony 2</a> | </li>
-                  <li><a href="#">Laravel</a> | </li>
-                  <li><a href="#">Git</a></li>
+                <li class="text-info">Html5/Css3 | </li>
+                  <li class="text-info">Php | </li>
+                  <li class="text-info">Symfony 2 | </li>
+                  <li class="text-info">Laravel | </li>
+                  <li class="text-info">Git</li>
               </ul>
           </div>
       </div>
