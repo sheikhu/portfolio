@@ -21,12 +21,13 @@ $app = new Illuminate\Foundation\Application;
 | Laravel takes a dead simple approach to your application environments
 | so you can just specify a machine name for the host that matches a
 | given environment, then we will automatically detect it for you.
-|
+|rt
 */
 
 $env = $app->detectEnvironment(array(
 
-	'local' => array('ubuntu-server', 'homestead', 'Sheikhu-HQ', 'USER-PC'),
+
+	'local' => array('ubuntu-server', 'homestead', 'Sheikhu-HQ', 'Sheikhu'),
 
 ));
 

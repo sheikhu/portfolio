@@ -44,11 +44,11 @@
                   <li><a href="#">Php</a> | </li>
                   <li><a href="#">Symfony 2</a> | </li>
                   <li><a href="#">Laravel</a> | </li>
-                  <li><a href="#">Git</a> | </li>
+                  <li><a href="#">Git</a></li>
               </ul>
           </div>
-    </div>
-</div>
+      </div>
+  </div>
 </div>
 
 <div class="row">
@@ -57,32 +57,32 @@
             <hr>
             <h2 class="intro-text text-center">
                 <span class="fa-stack fa-lg">
-  <i class="fa fa-circle-thin fa-stack-2x"></i>
-  <i class="fa fa-newspaper-o fa-stack-1x"></i>
-</span> Derniers articles
-            </h2>
-            <hr>
-            <div class="row">
-                @foreach ($posts as $post)
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <h3>
-                        <a href="{{ route('post.show', $post->slug) }}" class="post-title">
-                            {{ $post->title }}
-                        </a>
-                        <small>
-                         - <i class="fa fa-calendar"></i> {{ $post->created_at->format('d m, Y') }}
-                     </small>
-                 </h3>
-             </div>
-             @endforeach
-             <hr>
-             <div class="text-center">
-                <a href="{{ route('blog') }}" class="btn btn-default">
-                    Plus d'articles
-                </a>
-            </div>
+                  <i class="fa fa-circle-thin fa-stack-2x"></i>
+                  <i class="fa fa-newspaper-o fa-stack-1x"></i>
+              </span> Derniers articles
+          </h2>
+          <hr>
+          <div class="row">
+            @foreach ($posts as $post)
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <h3>
+                    <a href="{{ route('post.show', $post->slug) }}" class="post-title">
+                        {{ $post->title }}
+                    </a>
+                    <small>
+                       - <i class="fa fa-calendar"></i> {{ $post->created_at->format('d m, Y') }}
+                   </small>
+               </h3>
+           </div>
+           @endforeach
+           <hr>
+           <div class="text-center">
+            <a href="{{ route('blog') }}" class="btn btn-default">
+                Plus d'articles
+            </a>
         </div>
     </div>
+</div>
 </div>
 </div>
 <div class="row">

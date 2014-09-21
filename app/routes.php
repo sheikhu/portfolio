@@ -104,5 +104,8 @@ Route::get('blog', ['as' => 'blog', 'uses' => 'BlogController@index']);
 Route::get('blog/{slug}', ['as' => 'post.show', 'uses' => 'BlogController@show']);
 
 
-
+// Avoid 404 Page
+App::missing(function(){
+    return Redirect::route('home');
+});
 
